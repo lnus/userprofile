@@ -38,6 +38,9 @@ set encoding=utf-8
 set renderoptions+=type:directx
 set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
 
+"Fixed backspace to my liking
+set backspace=2
+
 "Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -62,7 +65,7 @@ nnoremap <silent> q :NERDTreeToggle<CR>
 let mapleader=" "
 let g:EasyMotion_leader_key='<Leader>'
 
-"Customization
+"Visual customization
 colorscheme moonfly 
 set background=dark
 set guifont=Knack_NF:h10
