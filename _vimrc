@@ -6,7 +6,7 @@ set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin('$HOME/vimfiles/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -15,6 +15,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -59,7 +60,6 @@ let $projects = 'D:\\Projects'
 
 "Remaps
 nnoremap <silent> z :w<CR> :<C-u> ! python %<CR>
-nnoremap <silent> q :NERDTreeToggle<CR>
 
 "Sets leader key
 let mapleader=" "
