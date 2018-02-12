@@ -15,8 +15,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'cburroughs/pep8.py'
 
 call vundle#end()
 filetype plugin indent on
