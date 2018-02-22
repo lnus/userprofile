@@ -57,7 +57,6 @@ let g:EasyMotion_leader_key='<Leader>'
 " Visual customization
 colorscheme moonfly 
 set background=dark
-set guifont=Knack_NF:h10
 set autochdir
 set number
 set numberwidth=5

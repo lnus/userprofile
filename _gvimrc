@@ -5,3 +5,9 @@ set guioptions-=L
 
 " Use console dialogs
 set guioptions+=c
+
+" Set font
+set guifont=Knack_NF:h12
+
+" Start in fullscreen
+au GUIEnter * simalt ~x
