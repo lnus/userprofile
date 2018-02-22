@@ -1,26 +1,23 @@
-" Vundle
+" Plug
 set nocompatible
-filetype off
 
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-call vundle#begin('$HOME/vimfiles/bundle')
+call plug#begin('$HOME/vimfiles/plugged')
 
 " Plugin list
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'JulesWang/css.vim'
-Plugin 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'JulesWang/css.vim'
+Plug 'cakebaker/scss-syntax.vim'
 
-call vundle#end()
-filetype plugin indent on
+" Plug end
+call plug#end()
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -33,7 +30,11 @@ if has("win32")
   language English_United States
 endif
 
+" Colorscheme
+colorscheme moonfly
+
 " Sets up enviroment
+filetype plugin indent on
 syntax on
 set smartindent
 set encoding=utf-8
@@ -57,7 +58,6 @@ let mapleader=" "
 let g:EasyMotion_leader_key='<Leader>'
 
 " Visual customization
-colorscheme moonfly 
 set background=dark
 set autochdir
 set number
