@@ -51,8 +51,10 @@ set expandtab
 " No audible bell
 set vb
 
-" No toolbar
+" Remove toolbar and scrollbars
 set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 
 " Use console dialogs
 set guioptions+=c
