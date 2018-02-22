@@ -32,7 +32,7 @@ if has("win32")
 endif
 
 " Colorscheme
-colorscheme moonfly
+colorscheme gruvbox
 
 " Sets up enviroment
 filetype plugin indent on
@@ -67,7 +67,6 @@ set relativenumber
 
 " Airline
 set laststatus=2
-let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 
 " Disable audio bells
