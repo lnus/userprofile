@@ -16,6 +16,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'JulesWang/css.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()
 filetype plugin indent on
