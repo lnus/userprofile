@@ -32,7 +32,6 @@ if has("win32")
 endif
 
 " Sets up enviroment
-cd $HOME
 syntax on
 set smartindent
 set encoding=utf-8
@@ -47,22 +46,6 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-
-" No audible bell
-set vb
-
-" Remove toolbar and scrollbars
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
-
-" Use console dialogs
-set guioptions+=c
-
-"Sets up variables
-let $desktop = '$HOME\\Desktop'
-let $vimrc = '$HOME\\_vimrc'
-let $projects = 'D:\\Projects'
 
 " Remaps
 nnoremap <silent> z :w<CR> :<C-u> ! python %<CR>
@@ -80,14 +63,14 @@ set number
 set numberwidth=5
 set relativenumber
 
+" Airline
+set laststatus=2
+let g:airline_theme='simple'
+let g:airline_powerline_fonts = 1
+
 " Display extra whitespace
 if has("win32")
   set list listchars=tab:»·,trail:·,nbsp:·
 else
   set list listchars=tab:Â»Â·,trail:Â·,nbsp:Â·
 endif
-
-" Airline
-set laststatus=2
-let g:airline_theme='simple'
-let g:airline_powerline_fonts = 1
