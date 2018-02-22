@@ -15,6 +15,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'morhetz/gruvbox'
 
 " Plug end
 call plug#end()
