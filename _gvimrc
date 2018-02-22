@@ -6,6 +6,9 @@ set guioptions-=L
 " Use console dialogs
 set guioptions+=c
 
+" Disable visual bell (Requires 'set noeb vb t_vb=' in vimrc)
+set vb t_vb=
+
 " Set font
 set guifont=Knack_NF:h12
 
