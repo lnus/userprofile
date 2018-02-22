@@ -16,6 +16,7 @@ Plug 'honza/vim-snippets'
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
 
 " Plug end
 call plug#end()
