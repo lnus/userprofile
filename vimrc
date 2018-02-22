@@ -33,7 +33,13 @@ if has("win32")
 endif
 
 " Colorscheme
-colorscheme gruvbox
+try
+  colorscheme gruvbox
+  let g:gruvbox_contrast_dark = 'hard'
+  let g:gruvbox_contrast_light = 'hard'
+catch
+  echom 'Could not init colorscheme, possibly installing?'
+endtry
 
 " Sets up enviroment
 filetype plugin indent on
