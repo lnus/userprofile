@@ -1,11 +1,22 @@
-# Userprofile - Kinda like dotfiles. ;)
+# Dotfiles - Mostly vim for now. ;)
 
-## Vundle
+## Windows
 
-In order to get my plugins, you need to install Vundle.
-I've left a batch script in 'vimfiles/bundles' to install the package, but you also need to follow some directions from [here](https://github.com/VundleVim/Vundle.vim).
+Simplest way to install for Windows is using this semi-dirty PowerShell script. Make sure you run it as admin.
 
-In order to install new plugins, just read my vimrc and you should be able to figure it out.
+```powershell
+git clone https://github.com/lnus/dotfiles.git $HOME\dotfiles
+
+cmd /c mklink _vimrc "$HOME\dotfiles\vimrc"
+cmd /c mklink _gvimrc "$HOME\dotfiles\gvimrc"
+
+mkdir $HOME\vimfiles\
+mkdir $HOME\vimfiles\autoload
+
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -OutFile "$HOME\vimfiles\autoload\plug.vim"
+
+gvim +PlugInstall +PlugClean!
+```
 
 ## Caps lock to ESC
 
