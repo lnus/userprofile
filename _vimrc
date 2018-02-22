@@ -1,10 +1,11 @@
-"Vundle
+" Vundle
 set nocompatible
 filetype off
 
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin('$HOME/vimfiles/bundle')
 
+" Plugin list
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdcommenter'
@@ -19,18 +20,18 @@ Plugin 'honza/vim-snippets'
 call vundle#end()
 filetype plugin indent on
 
-"Ultisnips
+" Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<s-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 
-"Always use English on Windows
+" Always use English on Windows
 if has("win32")
   set langmenu=en_US.UTF-8
   language English_United States
 endif
 
-"Sets up enviroment
+" Sets up enviroment
 cd $HOME
 syntax on
 set smartindent
@@ -38,18 +39,22 @@ set encoding=utf-8
 set renderoptions+=type:directx
 set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
 
-"Fixed backspace to my liking
+" Fixed backspace to my liking
 set backspace=2
 
-"Softtabs, 2 spaces
+" Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
 
-"Makes it more console like
-set guioptions+=lrbmTLce
-set guioptions-=lrbmTLce
+" No audible bell
+set vb
+
+" No toolbar
+set guioptions-=T
+
+" Use console dialogs
 set guioptions+=c
 
 "Sets up variables
@@ -57,14 +62,14 @@ let $desktop = '$HOME\\Desktop'
 let $vimrc = '$HOME\\_vimrc'
 let $projects = 'D:\\Projects'
 
-"Remaps
+" Remaps
 nnoremap <silent> z :w<CR> :<C-u> ! python %<CR>
 
-"Sets leader key
+" Sets leader key
 let mapleader=" "
 let g:EasyMotion_leader_key='<Leader>'
 
-"Visual customization
+" Visual customization
 colorscheme moonfly 
 set background=dark
 set guifont=Knack_NF:h10
@@ -73,14 +78,14 @@ set number
 set numberwidth=5
 set relativenumber
 
-"Display extra whitespace
+" Display extra whitespace
 if has("win32")
   set list listchars=tab:»·,trail:·,nbsp:·
 else
   set list listchars=tab:Â»Â·,trail:Â·,nbsp:Â·
 endif
 
-"Airline
+" Airline
 set laststatus=2
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
