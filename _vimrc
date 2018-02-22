@@ -38,7 +38,7 @@ set encoding=utf-8
 set renderoptions+=type:directx
 set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
 
-" Fixed backspace to my liking
+" Fix backspace to my liking
 set backspace=2
 
 " Softtabs, 2 spaces
