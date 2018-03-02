@@ -9,8 +9,5 @@ set guioptions+=c
 " Disable visual bell (Requires 'set noeb vb t_vb=' in vimrc)
 set vb t_vb=
 
-" Set font
-set guifont=Inconsolata_for_Powerline:h13
-
 " Start in fullscreen
 au GUIEnter * simalt ~x
