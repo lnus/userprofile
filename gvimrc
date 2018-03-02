@@ -10,7 +10,7 @@ set guioptions+=c
 set vb t_vb=
 
 " Set font
-set guifont=Knack_NF:h12
+set guifont=Inconsolata_for_Powerline:h13
 
 " Start in fullscreen
 au GUIEnter * simalt ~x
