@@ -10,4 +10,4 @@ set guioptions+=c
 set vb t_vb=
 
 " Start in fullscreen
-au GUIEnter * simalt ~x
+" au GUIEnter * simalt ~x
