@@ -25,3 +25,7 @@ gvim +PlugInstall +PlugClean! qa
 ## Caps lock to ESC
 
 I previously used an AutoHotKey script to change my Caps-Lock key to be used as an Escape key, however I now use [SharpKeys](https://github.com/randyrants/sharpkeys).
+
+## Font
+
+The font I use can be downloaded from [HERE](https://github.com/sgolovine/PlexNerdfont)!

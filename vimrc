@@ -4,7 +4,6 @@ set nocompatible
 call plug#begin('$HOME/vimfiles/plugged')
 
 " Plugin list
-Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -17,6 +16,9 @@ Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
+Plug 'flazz/vim-colorschemes'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'scrooloose/nerdtree'
 
 " Plug end
 call plug#end()
@@ -34,9 +36,7 @@ endif
 
 " Colorscheme
 try
-  colorscheme gruvbox
-  let g:gruvbox_contrast_dark = 'hard'
-  let g:gruvbox_contrast_light = 'hard'
+  colorscheme jellybeans
 catch
   echom 'Could not init colorscheme, possibly installing?'
 endtry
@@ -50,7 +50,7 @@ set renderoptions+=type:directx
 set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
 
 " Set font
-set guifont=Inconsolata_for_Powerline:h13
+set guifont=IBMPlexMono_Nerd_Font_Mono:h11
 
 " Fix backspace to my liking
 set backspace=2
@@ -63,6 +63,10 @@ set expandtab
 
 " Remaps
 nnoremap <silent> z :w<CR> :<C-u> ! python %<CR>
+map <leader>o :BufExplorer<cr>
+
+" NERDTree Remaps
+map q :NERDTreeToggle<cr>
 
 " Sets leader key
 let mapleader=" "
