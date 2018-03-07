@@ -94,4 +94,7 @@ let g:airline_powerline_fonts = 1
 
 " Disable audio bells
 set noeb vb t_vb=
-set belloff=all " Just to make sure ;)
+
+if has("win32")
+  set belloff=all " Just to make sure ;)
+endif
