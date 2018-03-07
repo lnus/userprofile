@@ -6,14 +6,14 @@
 ```sh
 git clone "https://github.com/lnus/dotfiles.git" "~/dotfiles"
 cd "~/dotfiles"
-.\install.sh
+sh ".\install.sh"
 ```
 
 ### Windows (Powershell)
 ```powershell
 git clone "https://github.com/lnus/dotfiles.git" "$HOME\dotfiles"
 cd "$HOME/dotfiles"
-.\install.ps1
+powershell ".\install.ps1"
 ```
 
 ## Caps lock to ESC
