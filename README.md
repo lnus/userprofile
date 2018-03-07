@@ -4,8 +4,8 @@
 
 ### Linux
 ```sh
-git clone "https://github.com/lnus/dotfiles.git" "$HOME/dotfiles"
-cd "$HOME/dotfiles"
+git clone "https://github.com/lnus/dotfiles.git" "~/dotfiles"
+cd "~/dotfiles"
 .\install.sh
 ```
 
