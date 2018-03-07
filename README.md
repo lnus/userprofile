@@ -1,25 +1,19 @@
 # Dotfiles - Mostly vim for now. ;)
 
-## Windows
+## Installation
 
-Simplest way to install for Windows is using this semi-dirty PowerShell script. Make sure you run it as admin.
+# Linux
+```sh
+git clone "https://github.com/lnus/dotfiles.git" "$HOME/dotfiles"
+cd "$HOME/dotfiles"
+.\install.sh
+```
 
-When you start gVim after letting the script finish, all should be well. 
-
-(You might get a colorscheme error when starting, but just ignore that for now. Might fix that later?)
-
+# Windows (Powershell)
 ```powershell
-git clone https://github.com/lnus/dotfiles.git $HOME\dotfiles
-
-cmd /c mklink _vimrc "$HOME\dotfiles\vimrc"
-cmd /c mklink _gvimrc "$HOME\dotfiles\gvimrc"
-
-mkdir $HOME\vimfiles\
-mkdir $HOME\vimfiles\autoload
-
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -OutFile "$HOME\vimfiles\autoload\plug.vim"
-
-gvim +PlugInstall +PlugClean! qa
+git clone "https://github.com/lnus/dotfiles.git" "$HOME\dotfiles"
+cd "$HOME/dotfiles"
+.\install.ps1
 ```
 
 ## Caps lock to ESC
