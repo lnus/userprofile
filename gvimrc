@@ -11,3 +11,10 @@ set vb t_vb=
 
 " Start in fullscreen
 " au GUIEnter * simalt ~x
+
+" Display extra whitespace
+if has("win32")
+  set list listchars=tab:»·,trail:·,nbsp:·
+else
+  set list listchars=tab:Â»Â·,trail:Â·,nbsp:Â·
+endif
