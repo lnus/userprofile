@@ -1,7 +1,12 @@
 " Plug
 set nocompatible
 
-call plug#begin('$HOME/vimfiles/plugged')
+" Loads in different places depending on operating system
+if has("win32")
+  call plug#begin('$HOME/vimfiles/plugged')
+else
+  call plug#begin("$HOME/.vim/plugged")
+endif
 
 " Plugin list
 Plug 'scrooloose/nerdcommenter'
@@ -46,8 +51,12 @@ filetype plugin indent on
 syntax on
 set smartindent
 set encoding=utf-8
-set renderoptions+=type:directx
-set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
+
+if has("win32")
+  set renderoptions+=type:directx
+  set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
+endif
+
 
 " Set font
 set guifont=IBMPlexMono_Nerd_Font_Mono:h11
