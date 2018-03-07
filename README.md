@@ -2,14 +2,14 @@
 
 ## Installation
 
-# Linux
+### Linux
 ```sh
 git clone "https://github.com/lnus/dotfiles.git" "$HOME/dotfiles"
 cd "$HOME/dotfiles"
 .\install.sh
 ```
 
-# Windows (Powershell)
+### Windows (Powershell)
 ```powershell
 git clone "https://github.com/lnus/dotfiles.git" "$HOME\dotfiles"
 cd "$HOME/dotfiles"
