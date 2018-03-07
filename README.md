@@ -6,7 +6,7 @@
 ```sh
 git clone "https://github.com/lnus/dotfiles.git" "~/dotfiles"
 cd "~/dotfiles"
-.\install.sh
+sh ".\install.sh"
 ```
 
 ### Windows (Powershell)

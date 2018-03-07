@@ -1,5 +1,3 @@
-git clone "https://github.com/lnus/dotfiles.git" "$HOME/dotfiles/"
-
 ln -s "$HOME/dotfiles/vimrc" "$HOME/.vimrc"
 
 mkdir "$HOME/.vim"
