@@ -1,3 +1,5 @@
+git pull # Updates the directory before any installing
+
 cmd /c mklink "$HOME\_vimrc" "$HOME\dotfiles\vimrc"
 cmd /c mklink "$HOME\_gvimrc" "$HOME\dotfiles\gvimrc"
 

@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'flazz/vim-colorschemes'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/nerdtree'
+Plug 'PProvost/vim-ps1'
 
 " Plug end
 call plug#end()

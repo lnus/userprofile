@@ -1,3 +1,5 @@
+git pull # Updates the directory before any installing
+
 ln -s "$HOME/dotfiles/vimrc" "$HOME/.vimrc"
 
 mkdir "$HOME/.vim"
