@@ -77,7 +77,7 @@ nnoremap <silent> z :w<CR> :<C-u> ! python %<CR>
 map <leader>o :BufExplorer<cr>
 
 " NERDTree Remaps
-map q :NERDTreeToggle<cr>
+map - :NERDTreeToggle<cr>
 
 " Sets leader key
 let mapleader=" "
