@@ -1,39 +1,55 @@
-echo "Pulling from GitHub..."
+param([Int32]$RERUN=0)
 
-git pull # Updates the directory before any installing
+if($RERUN -eq 0){
+  echo "Pulling from GitHub..."
 
-echo "Creating Symlinks..."
+  git pull # Updates the directory before any installing
+
+  echo "Creating Symlinks..."
 
 # Symlinks vimrc and gvimrc from dotfiles to correct location
 
-cmd /c mklink "$HOME\_vimrc" "$HOME\dotfiles\vimrc"
-cmd /c mklink "$HOME\_gvimrc" "$HOME\dotfiles\gvimrc"
+  cmd /c mklink "$HOME\_vimrc" "$HOME\dotfiles\vimrc"
+  cmd /c mklink "$HOME\_gvimrc" "$HOME\dotfiles\gvimrc"
 
-md "$HOME\vimfiles\" | Out-Null
-md "$HOME\vimfiles\autoload" | Out-Null
-
-# Puts snippets in correct location
-
-echo "Adding Snippets..."
-
-md "$HOME\vimfiles\plugged\vim-snippets\UltiSnips" | Out-Null
-
-Get-ChildItem "snippets\" |
-Foreach-Object {
-  $infile = $_.FullName
-  $outfile = "$HOME\vimfiles\plugged\vim-snippets\UltiSnips\" + $_.Name
-
-  cmd /c mklink $outfile $infile
-}
+  md "$HOME\vimfiles\" | Out-Null
+  md "$HOME\vimfiles\autoload" | Out-Null
 
 # Download plugged
 
-echo "Downloading Plugged..."
+  echo "Downloading Plugged..."
 
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" -OutFile "$HOME\vimfiles\autoload\plug.vim"
+  Invoke-WebRequest -Uri "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" -OutFile "$HOME\vimfiles\autoload\plug.vim"
 
-echo "Done!"
+  echo "Installing plugins..."
 
-gvim +PlugInstall +PlugClean! qa
+  gvim +PlugInstall +PlugClean!
+}
+
+# Puts snippets in correct location (doesn't work on first run)
+
+$SNIPPETS = "$HOME\vimfiles\plugged\vim-snippets\UltiSnips"
+
+if(Test-Path -Path $SNIPPETS){
+  echo "Adding snippets..."
+
+  Get-ChildItem "snippets\" |
+  Foreach-Object {
+    $infile = $_.FullName
+    $outfile = $SNIPPETS + "\" + $_.Name
+
+    cmd /c mklink $outfile $infile
+  }
+  $RERUN = 0
+} else {
+  $RERUN = 1
+  Start-Sleep -s 1
+}
+
+if($RERUN -ne 0){
+  & .\install.ps1 -RERUN 1
+}
+
+echo "Finished!"
 
 cmd /c pause | Out-Null
