@@ -1,6 +1,7 @@
-param([Int32]$RERUN=0)
+param(
+  [switch] $RERUN = $false)
 
-if($RERUN -eq 0){
+if(-Not $RERUN){
   echo "Pulling from GitHub..."
 
   git pull # Updates the directory before any installing
@@ -40,14 +41,14 @@ if(Test-Path -Path $SNIPPETS){
 
     cmd /c mklink $outfile $infile
   }
-  $RERUN = 0
+  $RERUN = $false
 } else {
-  $RERUN = 1
+  $RERUN = $true
   Start-Sleep -s 1
 }
 
-if($RERUN -ne 0){
-  & .\install.ps1 -RERUN 1
+if($RERUN){
+  & .\install.ps1 -RERUN $true
 }
 
 echo "Finished!"
