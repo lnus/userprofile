@@ -12,6 +12,7 @@ endif
 
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
+Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
@@ -26,14 +27,22 @@ Plug 'flazz/vim-colorschemes'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'PProvost/vim-ps1'
+Plug 'rpdelaney/vim-sourcecfg'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'chaimleib/vim-renpy'
 
 " Plug end
 call plug#end()
 
-" Ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<s-tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Always use English on Windows
 if has("win32")
@@ -41,9 +50,12 @@ if has("win32")
   language English_United States
 endif
 
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+
 " Colorscheme
 try
-  colorscheme jellybeans
+  colorscheme base16-ateliercave
 catch
   echom 'Could not init colorscheme, possibly installing?'
 endtry
@@ -55,13 +67,15 @@ set smartindent
 set encoding=utf-8
 
 if has("win32")
-  set renderoptions+=type:directx
-  set rop=type:directx,gamma:1.8,contrast:0.5,level:0.5,geom:1,renmode:5,taamode:1
 endif
 
-
-" Set font
-set guifont=IBMPlexMono_Nerd_Font_Mono:h11
+" Makes splitting not suck
+set splitbelow
+set splitright
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Fix backspace to my liking
 set backspace=2
@@ -73,7 +87,7 @@ set shiftround
 set expandtab
 
 " Remaps
-nnoremap <silent> z :w<CR> :<C-u> ! python %<CR>
+nnoremap <silent> f5 :w<CR> :<C-u> ! python %<CR>
 map <leader>o :BufExplorer<cr>
 
 " NERDTree Remaps
