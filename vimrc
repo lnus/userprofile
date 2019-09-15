@@ -10,10 +10,18 @@ endif
 
 " Plugin list
 
+" gvim only plugins
+
+if has("gui_running")
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'morhetz/gruvbox'
+endif
+
+" overall plugins
+
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-airline/vim-airline'
 Plug 'ervandew/supertab'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
@@ -21,7 +29,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'flazz/vim-colorschemes'
 Plug 'jlanzarotta/bufexplorer'
