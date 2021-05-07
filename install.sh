@@ -1,10 +1,20 @@
-git pull # Updates the directory before any installing
+#!/bin/bash
 
-ln -s "$HOME/dotfiles/vimrc" "$HOME/.vimrc"
+# make sure directory path is ok when script is started from anywhere
+MYDIR="$(dirname -- "$0")"
 
-mkdir "$HOME/.vim"
-mkdir "$HOME/.vim/autoload"
+# .vimrc install
+cp $MYDIR/vimrc ~/.vimrc
 
-wget "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" -O "$HOME/.vim/autoload/plug.vim"
+# nvim install
+rm -rf ~/.config/nvim || true
+cp -r $MYDIR/nvim ~/.config/nvim
 
-vim +PlugInstall +PlugClean! qa
+# Install coc extensions
+nvim -c +PlugInstall +qall
+nvim -c 'CocInstall -sync coc-python coc-json coc-html coc-css coc-tsserver coc-prettier coc-go coc-styled-components coc-graphql|q' +qall
+
+# .zshrc install
+cp -r $MYDIR/zshrc ~/.zshrc
+
+echo "dotfiles installed"
