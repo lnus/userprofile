@@ -21,8 +21,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'morhetz/gruvbox'
     Plug 'liuchengxu/vim-which-key'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'whatyouhide/vim-gotham'
+    Plug 'itchyny/lightline.vim'
+    Plug 'tpope/vim-fugitive'
 
 call plug#end()
