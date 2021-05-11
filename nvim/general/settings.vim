@@ -38,6 +38,8 @@ set relativenumber
 set list
 set listchars=tab:>-                    " Epic tabs
 
+filetype plugin on
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me

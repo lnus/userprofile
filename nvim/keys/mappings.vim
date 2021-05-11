@@ -56,3 +56,12 @@ map <Leader>ve :e $MYVIMRC<CR>
 
 map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFocus<CR>
+
+" fzf
+map <Leader>ff :Files<CR>
+map <Leader>fb :Buffer<CR>
+map <Leader>ft :Tags<CR>
+map <Leader>fg :GFiles<CR>
+map <Leader>fc :Colors<CR>
+map <Leader>fl :Lines<CR>
+map <Leader>fk :BLines<CR>

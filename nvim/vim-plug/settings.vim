@@ -28,6 +28,8 @@ let g:which_key_map = {'w' : 'save', 'r' : 'reformat', 'n': 'nerdtree'}
 let g:which_key_map.b = { 'name' :'+buffer', 'd': 'delete current buffer', 'n': 'next TAB', 'p': 'prev SHIFT-TAB' }
 let g:which_key_map.v = { 'name' : '+vim', 's': 'source vimrc', 'e': 'edit vimrc' }
 let g:which_key_map.n = { 'name': '+nerd', 't': 'toggle nerdtree', 'f': 'focus nerdtree' }
+let g:which_key_map.f = { 'name': '+fuzzyfinder' }
+let g:which_key_map.c = { 'name': '+nerdcommenter', 'g': 'Git Files', 'k': 'Current Buffer Lines', 'l': 'All Buffer Lines' }
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
@@ -37,7 +39,7 @@ let NERDTreeShowHidden = 1
 
 " ---- LightLine ----
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'filename' ] ]
