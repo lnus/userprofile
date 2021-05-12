@@ -43,8 +43,9 @@ nnoremap <C-l> <C-w>l
 " Go specific mapping
 autocmd BufEnter *.go nmap <leader>t  <Plug>(go-test)
 autocmd BufEnter *.go nmap <leader>tt <Plug>(go-test-func)
-autocmd BufEnter *.go nmap <leader>c  <Plug>(go-coverage-toggle)
 nmap <leader>r <Plug>(coc-rename)
+nmap <leader>e <Plug>(coc-format)
+
 
 " Vim related bindings
 " Save file with leader w, faster
