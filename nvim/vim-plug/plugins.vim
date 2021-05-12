@@ -33,8 +33,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    
 
     " Unity
+   Plug 'OmniSharp/omnisharp-vim' 
 
 call plug#end()

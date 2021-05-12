@@ -28,8 +28,8 @@ let g:which_key_map = {'w' : 'save', 'r' : 'reformat', 'n': 'nerdtree'}
 let g:which_key_map.b = { 'name' :'+buffer', 'd': 'delete current buffer', 'n': 'next TAB', 'p': 'prev SHIFT-TAB' }
 let g:which_key_map.v = { 'name' : '+vim', 's': 'source vimrc', 'e': 'edit vimrc' }
 let g:which_key_map.n = { 'name': '+nerd', 't': 'toggle nerdtree', 'f': 'focus nerdtree' }
-let g:which_key_map.f = { 'name': '+fuzzyfinder' }
-let g:which_key_map.c = { 'name': '+nerdcommenter', 'g': 'Git Files', 'k': 'Current Buffer Lines', 'l': 'All Buffer Lines' }
+let g:which_key_map.f = { 'name': '+fuzzyfinder', 'g': 'Git Files', 'k': 'Current Buffer Lines', 'l': 'All Buffer Lines' }
+let g:which_key_map.c = { 'name': '+nerdcommenter' }
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
@@ -89,3 +89,7 @@ function! LightlineFilename()
                 \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
                 \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
 endfunction
+
+" ---- COC ----
+" Language servers
+let g:coc_global_extensions=['coc-omnisharp', 'coc-json', 'coc-git', 'coc-go', 'coc-vimlsp', 'coc-python', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-prettier']
