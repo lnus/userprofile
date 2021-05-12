@@ -29,6 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/tagbar'
+    Plug 'mhinz/vim-startify'
 
     " fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

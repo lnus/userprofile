@@ -92,4 +92,4 @@ endfunction
 
 " ---- COC ----
 " Language servers
-let g:coc_global_extensions=['coc-omnisharp', 'coc-json', 'coc-git', 'coc-go', 'coc-vimlsp', 'coc-python', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-prettier']
+let g:coc_global_extensions=['coc-omnisharp', 'coc-json', 'coc-git', 'coc-go', 'coc-vimlsp', 'coc-python', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-prettier', 'coc-powershell', 'coc-sh']
