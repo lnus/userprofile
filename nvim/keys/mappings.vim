@@ -57,6 +57,7 @@ map <Leader>ve :e $MYVIMRC<CR>
 
 map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFocus<CR>
+map <Leader>, :noh<CR>
 
 " fzf
 map <Leader>ff :Files<CR>
