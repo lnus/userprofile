@@ -28,7 +28,11 @@ nnoremap <Leader>bd :bd<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 " <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <TAB
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Better tabbing
 vnoremap < <gv
